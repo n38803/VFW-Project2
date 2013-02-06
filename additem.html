@@ -1,76 +1,66 @@
 <!DOCTYPE html>
+<!-- Shaun Thompson - Project 1 - 1302 -->
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<meta name="description" content="This is my first project for Visual Frameworks." />
-		<meta name="keywords" content="Full Sail University, Shaun Thompson, Visual Frameworks Project, HTML5 Project" />
+		<meta name="description" content="This is my first project for Visual Frameworks - A Calorie Counter" />
+		<meta name="keywords" content="Full Sail University, Shaun Thompson, Visual Frameworks Project, Calorie Counter" />
 		<meta name="robots" content="noindex, nofollow" />	
 		<meta name="viewport" content="user-scalable=no, width=device-width" />
 		<meta name="viewport" content="target-densitydpi=device-dpi" />
 		<meta name="HandheldFriendly" content="True">
 		<meta name="MobileOptimized" content="320">
 	
-		<title>Visual Frameworks - Project 1</title>
-		
-		<link href="css/style.css" rel="stylesheet" type="text/css" ?>
-		
-		<script src="js/main.js" type="text/javascript"></script>
+		<title>SMT Calorie Counter - Add A Meal</title>
 		
 	</head>
 	
 	<body>
-		<!-- Heading Group -->
+		<!-- Header -->
 		<header>
-			<hgroup>
-				<h1>Visual Frameworks - Project 1</h1>
-				<h2>Shaun Thompson</h2>
-				<h3>02/10/13</h3>
-			</hgroup>
+			<p><center><h1>Track Your Meal!</h1></center></p>
 		</header>
 		
-		<!-- Application Navigation -->
-		<nav>
-			<ul>
-				<li>
-				<li>
-				<li>
-			</ul>
-		</nav>
-		
-		<div class="gray">
-			
-			<!-- Articles -->
-			<article>
-				<header><h1>This is a header in an article</h1></header>
-				<p>yadda yadda yadda</p>
-				<p>yadda yadda yadda 2</p>
-				<footer>This is a footer in an article</footer>
-			</article>
-			
-			<!-- Aside -->
-			<aside>
+		<!-- Form -->
+		<form action="#" method="post">
+			<fieldset>
+				<legend>Tracker</legend>
 				<ul>
-					<li>side of the page
-					<li>side notation
+					<li>Date:<input type="date" id="Date"><label for="date"></label></li>		
+					<li>Meal Type:
+						<ul>
+							<li><input type="radio" value="Breakfast" id="bfast" name="meal"><label for="bfast">Breakfast</label></li>
+							<li><input type="radio" value="Lunch" id="lunch" name="meal"><label for="lunch">Lunch</label></li>
+							<li><input type="radio" value="Dinner" id="dinner" name="meal"><label for="dinner">Dinner</label></li>
+							<li><input type="radio" value="Snack" id="snack" name="meal"><label for="snack">Snack</label></li>
+						</ul>
+					<li>Food Type:
+						<select id="type">
+							<option value="Meat">Meat</option>
+							<option value="Vegetable">Vegetable</option>	
+							<option value="Fruit">Fruit</option>	
+							<option value="Grain">Grain</option>
+							<option value="Dairy">Dairy</option>				
+						</select>
+					</li>
+					</li>
+					<li><label for="food">Food Name:</label><input type="text" id="food" placeholder="Steak, Apple, Popcorn, Etc"/></li>
+					<li><input type="range" id="calorie">
+					<li><label for="notes">Additional Notes:</label><textarea id="notes"></textarea></li>
+					<label type="hidden" value="true" /></li>				
 				</ul>
-			</aside>
-
-			<!-- Section -->			
-			<section>
-				<header><h1>This is a header in an section</h1></header>
-				<p>yadda yadda yadda</p>
-				<p>yadda yadda yadda 2</p>
-				<footer>This is a footer in an section</footer>
-			</section>
+			</fieldset>
+			<input type="submit" value="Track!" />
 			
-			<!-- Footer -->			
-			<footer>
-				<p>yadda yadda yadda this is a footer</p>
-				<p>yadda yadda yadda 2</p>
-			</footer>
-			
-		</div>
-
-	</body>
+		<!-- Footer -->
+		<footer>
+			<ul>
+				<li><a href="#">Clear Stored Data</a></li>
+				<li><a href="#">View Stored Data</a></li>
+			</ul>		
+			<p><center><small>&copy; SMT Designs - ShaunThompson@FullSail.edu</small></center></p>
+		</footer>
+		
+	</body>	
 		
 </html>
