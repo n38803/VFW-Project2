@@ -7,9 +7,29 @@ window.addEventListener("DOMContentLoaded", function(){
 		var theElement = document.getElementById(x);
 		return theElement;
 	};
+	
+	//Create select field element and populate with options.
+	function makeCats(){
+		var formTag = document.getElementsByTagName("form"),
+			selectLi = $('select'),
+			makeSelect = document.createElement('select');
+			makeSelect.setAttribute("id", "groups");
+			
+		for(var i=0, j=contactGroups.length; i<j; i++){
+			var makeOption = document.createElement('option');
+			var optText = contactGroups[i];
+			makeOption.setAttribute("value", optText);
+			makeOption.innerHTML = optText;
+			makeSelect.appendChild(makeOption);
+		};
+		selectLi.appendChild(makeSelect);
+	};
 
 	// Variable Defaults
-	var contactGroups = [];
+	var contactGroups = ["---Choose A Food Group---", "Meat", "Vegetable", "Fruit", "Grain", "Dairy"];
+	makeCats();
+
+/*
 
 	// Set link & Submit Click Events
 	var displayLink = $('displayLink');
@@ -19,9 +39,8 @@ window.addEventListener("DOMContentLoaded", function(){
 	var save = $('submit');
 	save.addEventListener("click", storeData);
 
-
-	};
-);
+*/
+});
 
 
 

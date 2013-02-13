@@ -24,7 +24,7 @@
 		</header>
 		
 		<!-- Form -->
-		<form action="#" method="post" id="myForm">
+		<form action="#" method="post" id="form">
 			<fieldset>
 				<legend>Tracker</legend>
 				<ul>
@@ -36,15 +36,7 @@
 							<li><input type="radio" value="Dinner" id="dinner" name="meal"><label for="dinner">Dinner</label></li>
 							<li><input type="radio" value="Snack" id="snack" name="meal"><label for="snack">Snack</label></li>
 						</ul>
-					<li>Food Type:
-						<select id="type">
-							<option value="Meat">Meat</option>
-							<option value="Vegetable">Vegetable</option>	
-							<option value="Fruit">Fruit</option>	
-							<option value="Grain">Grain</option>
-							<option value="Dairy">Dairy</option>				
-						</select>
-					</li>
+					<li id="select"><label for="group">Food Group:</label></li>
 					<li><label for="food">Food Name:</label><input type="text" id="food" placeholder="Steak, Apple, Popcorn, Etc"/></li>
 					<li><label for="calories">Calorie Amount: </label><input type="range" id="calories" min="1" max="1,000">
 					<li><label for="notes">Additional Notes:</label><textarea id="notes"></textarea></li>
