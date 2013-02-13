@@ -28,22 +28,23 @@
 			<fieldset>
 				<legend>Tracker</legend>
 				<ul>
-					<li><label for="date">Date: </label><input type="date" id="date"></li>		
-					<li>Meal Type:</li>
+					<li><label for="date">Date: </label><input type="date" id="date"></li>
+					<li id="select"><label for="type">Meal Type:</label></li>		
+					<li>Food Group:</li>
 						<ul>
-							<li><input type="radio" value="Breakfast" id="bfast" name="meal"><label for="bfast">Breakfast</label></li>
-							<li><input type="radio" value="Lunch" id="lunch" name="meal"><label for="lunch">Lunch</label></li>
-							<li><input type="radio" value="Dinner" id="dinner" name="meal"><label for="dinner">Dinner</label></li>
-							<li><input type="radio" value="Snack" id="snack" name="meal"><label for="snack">Snack</label></li>
+							<li><input type="radio" value="Meat" id="meat" name="group"><label for="meat">Meat</label></li>
+							<li><input type="radio" value="Vegetable" id="vegetable" name="group"><label for="vegetable">Vegetable</label></li>
+							<li><input type="radio" value="Fruit" id="fruit" name="group"><label for="fruit">Fruit</label></li>
+							<li><input type="radio" value="Grain" id="grain" name="group"><label for="grain">Grain</label></li>
+							<li><input type="radio" value="Dairy" id="dairy" name="group"><label for="dairy">Dairy</label></li>
 						</ul>
-					<li id="select"><label for="group">Food Group:</label></li>
-					<li><label for="food">Food Name:</label><input type="text" id="food" placeholder="Steak, Apple, Popcorn, Etc"/></li>
+					<li><label for="name">Food Name:</label><input type="text" id="name" placeholder="Steak, Apple, Popcorn, Etc"/></li>
 					<li><label for="calories">Calorie Amount: </label><input type="range" id="calories" min="1" max="1,000">
 					<li><label for="notes">Additional Notes:</label><textarea id="notes"></textarea></li>
 					<label type="hidden" value="true" /></li>				
 			</fieldset>
-			<input type="submit" value="Submit" />
-			
+			<input type="submit" value="Save Meal" id="submit" />
+		</form>
 		<!-- Footer -->
 		<footer>
 			<ul>

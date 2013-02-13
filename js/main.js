@@ -1,7 +1,52 @@
 // Wait until the DOM is ready
 window.addEventListener("DOMContentLoaded", function(){
 
-
+	//Save data into local storage
+/*	function storeData(key){
+	//find value of radio
+		getSelectedRadio();
+	//save form elements into storage
+		localStorage.setItem("Date", $('date').value);
+		localStorage.setItem("Type", $('type').value);	
+		localStorage.setItem("Group", $('group').value);
+		localStorage.setItem("Name", $('name').value);
+		localStorage.setItem("Calories", $('calories').value);
+		localStorage.setItem("Notes", $('notes').value);
+		
+		alert("Meal Saved!");
+	}; */
+	
+	function storeData(){
+		var id				= Math.floor(Math.random()*1000000001);
+		//Gather up all our form field values and store them in an object
+		//Object properties contain array with form label and input values
+		var item			= {};
+			item.date		= ["Date: ", $('date').value];
+			item.type		= ["Meal Type: ", $('type').value];
+			item.group		= ["Food Group: ", groupValue];
+			item.name		= ["Food Name: ", $('name').value];
+			item.calories	= ["Calories: ", $('calories').value];
+			item.notes		= ["Additional Notes: ", $('notes').value];
+		//Save data to local storage
+			localStorage.setItem(id, JSON.stringify(item));
+			alert("Contacted Saved!");
+			
+	};
+	
+	
+	//clear all data
+	function clearLocal(){
+		if(localStorage.length === 0){
+			alert("There is no data to clear!");
+		}else{
+			localStorage.clear();
+			alert("All meals have been erased.");
+			window.location.reload();
+			return false;
+		};
+	};
+	
+	
 	// getElementByID Function
 	function $(x){
 		var theElement = document.getElementById(x);
@@ -13,11 +58,11 @@ window.addEventListener("DOMContentLoaded", function(){
 		var formTag = document.getElementsByTagName("form"),
 			selectLi = $('select'),
 			makeSelect = document.createElement('select');
-			makeSelect.setAttribute("id", "groups");
+			makeSelect.setAttribute("id", "type");
 			
-		for(var i=0, j=contactGroups.length; i<j; i++){
+		for(var i=0, j=mealType.length; i<j; i++){
 			var makeOption = document.createElement('option');
-			var optText = contactGroups[i];
+			var optText = mealType[i];
 			makeOption.setAttribute("value", optText);
 			makeOption.innerHTML = optText;
 			makeSelect.appendChild(makeOption);
@@ -25,8 +70,9 @@ window.addEventListener("DOMContentLoaded", function(){
 		selectLi.appendChild(makeSelect);
 	};
 
+
 	// Variable Defaults
-	var contactGroups = ["---Choose A Food Group---", "Meat", "Vegetable", "Fruit", "Grain", "Dairy"];
+	var mealType = ["---Choose A Meal Type---", "Breakfast", "Lunch", "Dinner", "Other"];
 	makeCats();
 
 /*
@@ -36,10 +82,12 @@ window.addEventListener("DOMContentLoaded", function(){
 	displayLink.addEventListener("click", getData);
 	var clearLink = $('clear');
 	clearLink.addEventListener("click", clearLocal);
+	
+*/
 	var save = $('submit');
 	save.addEventListener("click", storeData);
 
-*/
+
 });
 
 
