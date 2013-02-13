@@ -8,26 +8,28 @@
 		<meta name="robots" content="noindex, nofollow" />	
 		<meta name="viewport" content="user-scalable=no, width=device-width" />
 		<meta name="viewport" content="target-densitydpi=device-dpi" />
-		<meta name="HandheldFriendly" content="True">
-		<meta name="MobileOptimized" content="320">
+		<meta name="HandheldFriendly" content="True" />
+		<meta name="MobileOptimized" content="320" />
 	
 		<title>SMT Calorie Counter - Add A Meal</title>
+		
+		<link rel="stylesheet" type"text/css" href="css/style.css" medin="only screen and (max-width: 485px)" />
 		
 	</head>
 	
 	<body>
 		<!-- Header -->
 		<header>
-			<p><center><h1>Track Your Meal!</h1></center></p>
+			<p><h1>Track Your Meal!</h1></p>
 		</header>
 		
 		<!-- Form -->
-		<form action="#" method="post">
+		<form action="#" method="post" id="myForm">
 			<fieldset>
 				<legend>Tracker</legend>
 				<ul>
 					<li><label for="date">Date: </label><input type="date" id="date"></li>		
-					<li>Meal Type:
+					<li>Meal Type:</li>
 						<ul>
 							<li><input type="radio" value="Breakfast" id="bfast" name="meal"><label for="bfast">Breakfast</label></li>
 							<li><input type="radio" value="Lunch" id="lunch" name="meal"><label for="lunch">Lunch</label></li>
@@ -43,12 +45,10 @@
 							<option value="Dairy">Dairy</option>				
 						</select>
 					</li>
-					</li>
 					<li><label for="food">Food Name:</label><input type="text" id="food" placeholder="Steak, Apple, Popcorn, Etc"/></li>
-					<li><label for="calories">Calorie Amount: </label><input type="range" id="calories">
+					<li><label for="calories">Calorie Amount: </label><input type="range" id="calories" min="1" max="1,000">
 					<li><label for="notes">Additional Notes:</label><textarea id="notes"></textarea></li>
 					<label type="hidden" value="true" /></li>				
-				</ul>
 			</fieldset>
 			<input type="submit" value="Submit" />
 			
@@ -58,9 +58,10 @@
 				<li><a href="#">Clear Stored Data</a></li>
 				<li><a href="#">View Stored Data</a></li>
 			</ul>		
-			<p><center><small>&copy; SMT Designs - ShaunThompson@FullSail.edu</small></center></p>
+			<p><small>&copy; SMT Designs - ShaunThompson@FullSail.edu</small></p>
 		</footer>
 		
+		<script src="js/main.js" type="text/javascript"></script>
 	</body>	
 		
 </html>

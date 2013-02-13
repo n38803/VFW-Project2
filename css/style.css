@@ -1,0 +1,49 @@
+/*
+Shaun M Thompson
+VFW 1302
+roject 2 Styles
+*/
+
+body{font-family: Arial, Helvetica, san-serif;width: 571px;margin: auto;padding: 10px}
+#site-wrapper{background: url(../img/iphoneBG.jpg) no-repeat;height: 885px;padding-top:}
+#content{width: 480px;height; 690px;overflow; scroll;}
+
+h1 {
+	margin: 20px 20px 20px 20px;
+	border: 1px solid #000;
+	padding: 10px;
+	background: #ff0000;
+	
+	width: ;
+	height: ;
+	display: ;
+	overflow: ;
+	visibility: ;
+	word-wrap: ;
+}
+
+p{
+	color: #ff000;
+	font-style: italic;
+	font-family: "Times New Roman", Times, serif;
+	font-weight: bold;
+	font: ;
+	line-height: ;
+	letter-spacing: ;
+	text-align: ;
+	text-indent: ;
+	text-transform: ;
+	text-decoration: ;
+	
+
+li{
+	display: block;
+	border: 1px solid blue;
+}
+
+a{
+	outline: 1px dotted blue;
+}
+
+a:hover{color: white;outline: none;}
+	
