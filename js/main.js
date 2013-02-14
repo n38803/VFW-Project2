@@ -1,3 +1,8 @@
+//Shaun Thompson
+//VFW 1302 - Project 2
+//02/17/2013
+
+
 // Wait until the DOM is ready
 window.addEventListener("DOMContentLoaded", function(){
 
@@ -62,16 +67,15 @@ window.addEventListener("DOMContentLoaded", function(){
 			return false;
 		};
 	};
-	
-	
-	// getElementByID Function
+		
+	//getElementByID Function
 	function $(x){
 		var theElement = document.getElementById(x);
 		return theElement;
 	};
 	
 	//Create select field element and populate with options.
-	function makeCats(){
+	function makeType(){
 		var formTag = document.getElementsByTagName("form"),
 			selectLi = $('select'),
 			makeSelect = document.createElement('select');
@@ -122,10 +126,9 @@ window.addEventListener("DOMContentLoaded", function(){
 		};
 	};
 		
-	makeCats();
+	makeType();
 
-
-	// Set link & Submit Click Events
+	//Set link & Submit Click Events
 	var displayLink = $('displayLink');
 	displayLink.addEventListener("click", getData);
 	
